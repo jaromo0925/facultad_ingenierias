@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienestar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Bienestar Universitario</h1>
+        
+
+        <div id="graficoTipoAcompanamiento" style="width: 100%; height: 400px;" class="my-4"></div>
+        <div id="graficoBarraDocente" style="width: 100%; height: 400px;" class="my-4"></div>
+
+        <table id="tablaBienestar" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Nombre Colaborador</th>
+                    <th>Tipo de Acompañamiento</th>
+                    <th>Cursos o Temas Acompañados</th>
+                    <th>Número de Estudiantes Acompañados</th>
+                    <th>Impacto</th>
+                    <th>Observaciones</th>
+                    <th>Link Evidencia</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts"></script>
+    <!-- Script de la página -->
+    <script src="js/bienestar.js"></script>
+</body>
+</html>

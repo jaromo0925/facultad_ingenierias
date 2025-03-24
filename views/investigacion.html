@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización de Datos Dinámicos</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center">Visualización de Datos</h1>
+        
+        <!-- Gráficos -->
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div id="graficoColaboradorTipoProducto" style="width: 100%; height: 400px;"></div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div id="graficoColaboradorProducto" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div id="graficoColaboradorCofinanciado" style="width: 100%; height: 400px;"></div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div id="graficoNodoProductos" style="width: 100%; height: 400px;"></div>
+            </div>
+        </div>
+
+        <!-- Tabla -->
+        <h2 class="mt-5">Tabla de Datos</h2>
+        <table id="tablaDatos" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Nombre Colaborador</th>
+                    <th>Tipo de Producto</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Finalización</th>
+                    <th>Producto</th>
+                    <th>Cofinanciado</th>
+                    <th>Entidad Cofinanciadora</th>
+                    <th>Nodo</th>
+                    <th>Observaciones</th>
+                    <th>Link Evidencia</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <script src="js/investigacion.js"></script>
+</body>
+</html>
