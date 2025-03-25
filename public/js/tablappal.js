@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Inicializar DataTable
     const tabla = $('#miTabla').DataTable({
         ajax: {
-            url: 'http://localhost:3000/data/Concertación_Propositos.json', // URL correcta
+            url: '/data/Concertación_Propositos.json', // URL correcta
             dataSrc: ''
         },
         columns: [
