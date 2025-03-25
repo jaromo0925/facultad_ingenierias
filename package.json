@@ -1,11 +1,17 @@
 {
-  "description": "",
+  "name": "mi-app",
+  "version": "1.0.0",
+  "description": "API con Express",
+  "main": "index.js",  // Asegúrate de que coincida con tu archivo principal
+  "scripts": {
+    "start": "node index.js",  // Comando para producción
+    "dev": "nodemon index.js"  // Comando para desarrollo (opcional)
+  },
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "ejs": "^3.1.10",
-    "expres": "^0.0.5",
-    "express": "^4.21.1"
+    "express": "^4.21.1"  // Corregido: "expres" → "express"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
