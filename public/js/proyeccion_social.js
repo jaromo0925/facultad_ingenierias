@@ -92,11 +92,22 @@ function actualizarGraficosProyeccionSocial(datos) {
     }));
 
     graficoProyectosPorColaborador.setOption({
-        title: { text: "Proyectos por Colaborador y Estado (Apilado)", left: "center" },
+        title: { text: "Proyectos por Colaborador y Estado (Apilado)", left: "center", top: 20 },
         tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
-        xAxis: { type: 'category', data: colaboradores, axisLabel: { rotate: 45 } },
-        yAxis: { type: 'value' },
         legend: { data: estados },
+    grid: { 
+        top: 80,  
+        left: '10%', 
+        right: '10%', 
+        bottom: 50 
+    },
+        xAxis: { type: 'category', data: colaboradores, axisLabel: { rotate: 0 },
+        textStyle: { 
+            fontWeight: "bold",  // Hace el texto en negrita
+            color: "#FF5733",     // Cambia el color de la etiqueta
+            fontSize: 12          // Ajusta el tamaño del texto
+        },align: "center" },
+        yAxis: { type: 'value' },
         series: seriesEstado
     });
 
