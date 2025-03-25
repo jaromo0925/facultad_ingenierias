@@ -19,7 +19,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-
+// Ruta para servir el JSON
+app.get("/data/Concertación_Propositos.json", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "data", "Concertación_Propositos.json"));
+});
 
 // Inicia el servidor
 app.listen(PORT, () => {
