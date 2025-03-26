@@ -130,7 +130,18 @@ function actualizarGraficosProductos(datos){
         xAxis: {
             type: 'category',
             data: lineas,
-            axisLabel: { rotate: 35 }
+            axisLabel: { 
+                fontSize: 10,
+                rotate: 0,  // Sin inclinación para facilitar la lectura
+                interval: 0,
+                formatter: function(value) 
+                 {
+                // Inserta un salto de línea cada 10 caracteres.
+                // Puedes ajustar el número (10) según la longitud de tus textos.
+        return value.replace(/(.{10})/g, '$1\n');
+                 }
+                        }
+
         },
         yAxis: { type: 'value' },
         series: seriesData
