@@ -58,13 +58,14 @@ function inicializarGraficosProductos(datos) {
 }
 
 // Función para actualizar los gráficos
-function actualizarGraficosProductos(datos) {
+function actualizarGraficosProductos(datos){
     // Gráfico: Pie con cantidad de productos por línea
     const productosPorLinea = datos.reduce((acc, curr) => {
         const linea = curr["Nombre de la Línea "];
         acc[linea] = (acc[linea] || 0) + 1;
         return acc;
     }, {});
+
     graficoProductosPorLinea.setOption({
         title: { text: "Cantidad de Productos por Línea", left: "center" },
         tooltip: { trigger: 'item' },
@@ -98,7 +99,7 @@ function actualizarGraficosProductos(datos) {
         data: lineas.map(linea => datosPorLineaYTipo[linea][tipo] || 0)
     }));
 
-graficoTiposDeProductos.setOption({
+    graficoTiposDeProductos.setOption({
         title: { 
             text: "Tipos de Productos por Línea (Apilado)", 
             left: "center",
@@ -147,3 +148,4 @@ graficoTiposDeProductos.setOption({
 
 // Llamar a la función de carga al iniciar la página
 document.addEventListener('DOMContentLoaded', cargarDatosProductos);
+
