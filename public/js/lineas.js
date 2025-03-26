@@ -132,30 +132,14 @@ function actualizarGraficosProductos(datos){
             type: 'category',
             data: lineas,
               axisLabel: { 
-            fontSize: 10,  // Reducir el tamaño de fuente
-            rotate: 0,     // Sin inclinación para facilitar la lectura
-            interval: 0,   // Mostrar todas las etiquetas
+            fontSize: 10,
+            rotate: 0,  // Sin inclinación para facilitar la lectura
+            interval: 0,
             formatter: function(value) {
-                // Configurar el máximo de caracteres por línea
-                var maxLen = 10;
-                if (value.length <= maxLen) {
-                    return value;
-                }
-                var words = value.split(' ');
-                var result = '';
-                var line = '';
-                // Se recorre cada palabra y se arma la línea
-                for (var i = 0; i < words.length; i++) {
-                    // Si la línea actual más la siguiente palabra excede el máximo...
-                    if ((line + words[i]).length > maxLen) {
-                        result += line.trim() + '\n';
-                        line = words[i] + ' ';
-                    } else {
-                        line += words[i] + ' ';
-                    }
-                }
-                result += line.trim();
-                return result;
+                // Inserta un salto de línea cada 10 caracteres.
+                // Puedes ajustar el número (10) según la longitud de tus textos.
+                return value.replace(/(.{10})/g, '$1\n');
+            }
             }
         }
     },
