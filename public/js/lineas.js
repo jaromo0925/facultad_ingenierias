@@ -122,7 +122,8 @@ function actualizarGraficosProductos(datos) {
         },
         yAxis: { type: 'value' },
         legend: { data: tiposDeProductos,
-            top: 40 },
+            top: 10,
+            left: "center"},
         series: seriesData
     });
 }
