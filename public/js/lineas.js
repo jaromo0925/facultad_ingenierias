@@ -123,7 +123,8 @@ function actualizarGraficosProductos(datos) {
         xAxis: {
             type: 'category',
             data: lineas,
-            axisLabel: { rotate: 45 }
+            axisLabel: { rotate: 0, 
+        fontSize: 10 }
         },
         grid: { 
     top: 80, // Deja más espacio entre la leyenda y el gráfico
