@@ -124,7 +124,7 @@ function actualizarGraficosProductos(datos) {
             type: 'category',
             data: lineas,
             axisLabel: { rotate: 0, 
-        fontSize: 10 }
+        fontSize: 40 }
         },
         grid: { 
     top: 80, // Deja más espacio entre la leyenda y el gráfico
