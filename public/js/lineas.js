@@ -127,10 +127,7 @@ function actualizarGraficosProductos(datos){
                 return content;
             }
         },
-         legend: { 
-        data: tiposDeProductos,
-        top: 5 // Subir la leyenda más arriba
-    },
+        
         xAxis: {
             type: 'category',
             data: lineas,
