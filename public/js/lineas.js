@@ -99,54 +99,50 @@ function actualizarGraficosProductos(datos) {
     }));
 
 graficoTiposDeProductos.setOption({
-       title: { 
-        text: "Participación Porcentual de Tipos de Productos por Línea", 
-        left: "center",
-        top: -5
-    },
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: { type: 'shadow' },
-        formatter: params => {
-            let content = `<strong>${params[0].axisValue}</strong><br>`;
-            params.forEach(item => {
-                content += `${item.marker} ${item.seriesName}: ${item.value}%<br>`;
-            });
-            return content;
-        }
-    },
-    legend: { 
-        data: tiposDeProductos,
-        top: 20
-    },
-    grid: { 
-        top: 50, 
-        left: '5%', 
-        right: '5%', 
-        bottom: 20 
-    },
-    xAxis: {
-        type: 'category',
-        data: lineas,
-        axisLabel: { 
-            rotate: 35 
-        }
-    },
-    yAxis: { 
-        type: 'value',
-        axisLabel: { formatter: '{value}%' }
-    },
-    series: seriesData.map(serie => ({
-        ...serie,
-        type: 'bar',
-        stack: 'total',
-        label: {
-            show: true,
-            position: 'inside',
-            formatter: '{c}%'
-        }
-    }))
-});
+     graficoTiposDeProductos.setOption({
+        title: { 
+            text: "Tipos de Productos por Línea (Apilado)", 
+            left: "center",
+            top: -5
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { type: 'shadow' },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'shadow' },
+                formatter: params => {
+                    let content = `<strong>${params[0].axisValue}</strong><br>`;
+                    params.forEach(item => {
+                        content += `${item.marker} ${item.seriesName}: ${item.value}<br>`;
+                    });
+                    return content;
+                }
+            },
+            formatter: params => {
+                let content = `<strong>${params[0].axisValue}</strong><br>`;
+                params.forEach(item => {
+                    content += `${item.marker} ${item.seriesName}: ${item.value}<br>`;
+                });
+                return content;
+            }
+        },
+        xAxis: {
+            type: 'category',
+            data: lineas,
+            axisLabel: { rotate: 35 }
+        },
+        yAxis: { type: 'value' },
+        legend: { data: tiposDeProductos,
+            top: 20 },
+            grid: { 
+                top: 50, // Asegura suficiente espacio entre la leyenda y el gráfico
+                left: '100%',
+                right: '100%',
+                bottom: 20 
+            },
+        series: seriesData
+    });
 }
 
 
