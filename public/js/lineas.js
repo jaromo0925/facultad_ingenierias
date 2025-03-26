@@ -131,10 +131,17 @@ function actualizarGraficosProductos(datos){
         xAxis: {
             type: 'category',
             data: lineas,
-            axisLabel: { rotate: 35, 
-                        interval: 0 
-                       }
-        },
+             axisLabel: { 
+            fontSize: 10, // Reducir el tamaño del texto
+            rotate: 0, // Evitar que el texto se incline
+            interval: 0, // Mostrar todas las etiquetas
+            width: 80, // Limitar el ancho de cada etiqueta
+            overflow: "break", // Permitir saltos de línea
+            formatter: function(value) {
+                return value.split(" ").join("\n"); // Forzar saltos de línea
+            }
+        }
+    },
         yAxis: { type: 'value' },
         series: seriesData
     });
