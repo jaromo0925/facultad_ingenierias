@@ -139,10 +139,10 @@ function actualizarGraficosNomina(datos) {
     }));
     graficosNomina.barrasPorNombre.setOption({
         title: { text: "Distribución de Horas por Nombre (Apilado)",
-               top: 20}
+               top: 40},
         left: 'center',
         grid: {
-        top: 80,
+        top: 120,
         left: 50,
         right: 50,
         bottom: 100
