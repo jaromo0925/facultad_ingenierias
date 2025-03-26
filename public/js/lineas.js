@@ -127,8 +127,7 @@ function actualizarGraficosProductos(datos){
                 return content;
             }
         },
-        xAxis: {
-                       type: 'category',
+        xAxis: {            type: 'category',
             data: lineas,
               axisLabel: { 
             fontSize: 10,
@@ -138,8 +137,11 @@ function actualizarGraficosProductos(datos){
                 // Inserta un salto de línea cada 10 caracteres.
                 // Puedes ajustar el número (10) según la longitud de tus textos.
                 return value.replace(/(.{10})/g, '$1\n');
+            }
+            }
+        }
+    },
 
-        },
         yAxis: { type: 'value' },
         series: seriesData
     });
