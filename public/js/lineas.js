@@ -102,7 +102,7 @@ function actualizarGraficosProductos(datos) {
         title: { 
             text: "Tipos de Productos por Línea (Apilado)", 
             left: "center",
-            top: 5
+            top: 0
         },
         tooltip: {
             trigger: 'axis',
@@ -133,7 +133,7 @@ function actualizarGraficosProductos(datos) {
        },
         yAxis: { type: 'value' },
         legend: { data: tiposDeProductos,
-            top: 10,
+            top: 40,
             left: "center"},
         series: seriesData
     });
