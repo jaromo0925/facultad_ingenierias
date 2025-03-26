@@ -138,7 +138,8 @@ function actualizarGraficosNomina(datos) {
         data: datos.map(d => d[actividad] || 0)
     }));
     graficosNomina.barrasPorNombre.setOption({
-        title: { text: "Distribución de Horas por Nombre (Apilado)" },
+        title: { text: "Distribución de Horas por Nombre (Apilado)",
+               top: 20},
         tooltip: {
             trigger: 'axis',
             axisPointer: { type: 'shadow' },
