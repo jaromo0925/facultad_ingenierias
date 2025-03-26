@@ -115,11 +115,7 @@ function actualizarGraficosProductos(datos) {
                 return content;
             }
         },
-        legend: { 
-    data: tiposDeProductos,
-    top: 20, // Sube la leyenda
-    left: "center"
-               },
+    
         xAxis: {
             type: 'category',
             data: lineas,
