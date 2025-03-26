@@ -136,14 +136,6 @@ function actualizarGraficosProductos(datos){
                        }
         },
         yAxis: { type: 'value' },
-        legend: { data: tiposDeProductos,
-            top: 20 },
-            grid: { 
-                top: 50, // Asegura suficiente espacio entre la leyenda y el gráfico
-                left: '100%',
-                right: '100%',
-                bottom: 20 
-            },
         series: seriesData
     });
 }
