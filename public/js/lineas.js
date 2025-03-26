@@ -131,14 +131,31 @@ function actualizarGraficosProductos(datos){
         xAxis: {
             type: 'category',
             data: lineas,
-             axisLabel: { 
-            fontSize: 10, // Reducir el tamaño del texto
-            rotate: 0, // Evitar que el texto se incline
-            interval: 0, // Mostrar todas las etiquetas
-            width: 80, // Limitar el ancho de cada etiqueta
-            overflow: "break", // Permitir saltos de línea
+              axisLabel: { 
+            fontSize: 10,  // Reducir el tamaño de fuente
+            rotate: 0,     // Sin inclinación para facilitar la lectura
+            interval: 0,   // Mostrar todas las etiquetas
             formatter: function(value) {
-                return value.split(" ").join("\n"); // Forzar saltos de línea
+                // Configurar el máximo de caracteres por línea
+                var maxLen = 10;
+                if (value.length <= maxLen) {
+                    return value;
+                }
+                var words = value.split(' ');
+                var result = '';
+                var line = '';
+                // Se recorre cada palabra y se arma la línea
+                for (var i = 0; i < words.length; i++) {
+                    // Si la línea actual más la siguiente palabra excede el máximo...
+                    if ((line + words[i]).length > maxLen) {
+                        result += line.trim() + '\n';
+                        line = words[i] + ' ';
+                    } else {
+                        line += words[i] + ' ';
+                    }
+                }
+                result += line.trim();
+                return result;
             }
         }
     },
