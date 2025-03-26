@@ -99,7 +99,7 @@ function actualizarGraficos(datos) {
             axisLabel: { rotate: 45 } // Girar etiquetas
         },
         yAxis: { type: 'value' },
-        legend: { data: tiposProductos },
+       // legend: { data: tiposProductos },
         series: seriesData1
     });
 
@@ -140,7 +140,7 @@ function actualizarGraficos(datos) {
             axisLabel: { rotate: 45 }
         },
         yAxis: { type: 'value' },
-        legend: { data: productos },
+       // legend: { data: productos },
         series: seriesData2
     });
 
