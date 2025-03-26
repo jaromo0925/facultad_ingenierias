@@ -98,15 +98,26 @@ function actualizarGraficosProductos(datos) {
         data: lineas.map(linea => datosPorLineaYTipo[linea][tipo] || 0)
     }));
 
-    graficoTiposDeProductos.setOption({
+graficoTiposDeProductos.setOption({
         title: { 
             text: "Tipos de Productos por Línea (Apilado)", 
             left: "center",
-            top: 10
+            top: -5
         },
         tooltip: {
             trigger: 'axis',
             axisPointer: { type: 'shadow' },
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: { type: 'shadow' },
+                formatter: params => {
+                    let content = `<strong>${params[0].axisValue}</strong><br>`;
+                    params.forEach(item => {
+                        content += `${item.marker} ${item.seriesName}: ${item.value}<br>`;
+                    });
+                    return content;
+                }
+            },
             formatter: params => {
                 let content = `<strong>${params[0].axisValue}</strong><br>`;
                 params.forEach(item => {
@@ -115,26 +126,20 @@ function actualizarGraficosProductos(datos) {
                 return content;
             }
         },
-    legend: { 
-        data: tiposDeProductos,
-        top: 50, // Baja la leyenda para que no se monte con el título
-        left: "center"
-    },
-    grid: { 
-        top: 100,  // Espacio suficiente para la leyenda
-        bottom: 50, 
-        left: 50, 
-        right: 50 
-    },
         xAxis: {
             type: 'category',
             data: lineas,
-            axisLabel: { 
-                rotate: 0, 
-                fontSize: 10 
-            }
+            axisLabel: { rotate: 35 }
         },
         yAxis: { type: 'value' },
+        legend: { data: tiposDeProductos,
+            top: 20 },
+            grid: { 
+                top: 50, // Asegura suficiente espacio entre la leyenda y el gráfico
+                left: '100%',
+                right: '100%',
+                bottom: 20 
+            },
         series: seriesData
     });
 }
