@@ -99,7 +99,6 @@ function actualizarGraficosProductos(datos) {
     }));
 
 graficoTiposDeProductos.setOption({
-     graficoTiposDeProductos.setOption({
         title: { 
             text: "Tipos de Productos por Línea (Apilado)", 
             left: "center",
