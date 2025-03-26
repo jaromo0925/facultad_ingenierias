@@ -103,7 +103,7 @@ function actualizarGraficosProductos(datos){
         title: { 
             text: "Tipos de Productos por Línea (Apilado)", 
             left: "center",
-            top: 5
+            top: -5
         },
         tooltip: {
             trigger: 'axis',
@@ -127,23 +127,20 @@ function actualizarGraficosProductos(datos){
                 return content;
             }
         },
-        
         xAxis: {
             type: 'category',
             data: lineas,
-              axisLabel: { 
-            fontSize: 10,
-            rotate: 0,  // Sin inclinación para facilitar la lectura
-            interval: 0,
-            formatter: function(value) {
-                // Inserta un salto de línea cada 10 caracteres.
-                // Puedes ajustar el número (10) según la longitud de tus textos.
-                return value.replace(/(.{10})/g, '$1\n');
-            }
-            }
-        }
-    },
+            axisLabel: { rotate: 35 }
+        },
         yAxis: { type: 'value' },
+        legend: { data: tiposDeProductos,
+            top: 20 },
+            grid: { 
+                top: 50, // Asegura suficiente espacio entre la leyenda y el gráfico
+                left: '100%',
+                right: '100%',
+                bottom: 20 
+            },
         series: seriesData
     });
 }
