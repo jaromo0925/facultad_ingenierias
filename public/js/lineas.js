@@ -99,53 +99,40 @@ function actualizarGraficosProductos(datos){
         data: lineas.map(linea => datosPorLineaYTipo[linea][tipo] || 0)
     }));
 
-    graficoTiposDeProductos.setOption({
-        title: { 
-            text: "Tipos de Productos por Línea (Apilado)", 
-            left: "center",
-            top: 5
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: { type: 'shadow' },
-            tooltip: {
-                trigger: 'axis',
-                axisPointer: { type: 'shadow' },
-                formatter: params => {
-                    let content = `<strong>${params[0].axisValue}</strong><br>`;
-                    params.forEach(item => {
-                        content += `${item.marker} ${item.seriesName}: ${item.value}<br>`;
-                    });
-                    return content;
-                }
-            },
-            formatter: params => {
-                let content = `<strong>${params[0].axisValue}</strong><br>`;
-                params.forEach(item => {
-                    content += `${item.marker} ${item.seriesName}: ${item.value}<br>`;
-                });
-                return content;
-            }
-        },
-        
-        xAxis: {
-            type: 'category',
-            data: lineas,
-              axisLabel: { 
+   graficoTiposDeProductos.setOption({
+    title: { 
+        text: "Tipos de Productos por Línea (Apilado)", 
+        left: "center",
+        top: 5
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter: params => {
+            let content = `<strong>${params[0].axisValue}</strong><br>`;
+            params.forEach(item => {
+                content += `${item.marker} ${item.seriesName}: ${item.value}<br>`;
+            });
+            return content;
+        }
+    },
+    xAxis: {
+        type: 'category',
+        data: lineas,
+        axisLabel: { 
             fontSize: 10,
-            rotate: 0,  // Sin inclinación para facilitar la lectura
+            rotate: 0,
             interval: 0,
             formatter: function(value) {
-                // Inserta un salto de línea cada 10 caracteres.
-                // Puedes ajustar el número (10) según la longitud de tus textos.
+                // Inserta un salto de línea cada 10 caracteres
                 return value.replace(/(.{10})/g, '$1\n');
-            }
             }
         }
     },
-        yAxis: { type: 'value' },
-        series: seriesData
-    });
+    yAxis: { type: 'value' },
+    series: seriesData
+});
+
 }
 
 
