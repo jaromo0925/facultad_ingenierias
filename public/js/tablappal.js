@@ -66,7 +66,9 @@ $(document).ready(function () {
             fontWeight: 'bold', // Negrita
             color: '#333'       // Color del texto
         },
-               },
+        left: 'center'  
+                
+        },
         tooltip: {},
         legend: { data: ['Microproyectos'], top: 'bottom' },
         radar: { indicator: [] },
