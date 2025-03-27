@@ -39,14 +39,10 @@ $(document).ready(function () {
     const radarChartProyectos = echarts.init(document.getElementById('graficoRadarProyectos'));
     const radarOptionsProyectos = {
         title: { 
-        text: 'Contribución por Docentes a Proyectos Estratégicos',
-        textStyle: {
-            fontSize: 18,       // Tamaño de la fuente
-            fontWeight: 'bold', // Negrita
-            color: '#333'       // Color del texto
+            text: 'Contribución por Docentes a Proyectos Estratégicos',
+            textStyle: { fontSize: 18, fontWeight: 'bold', color: '#333' },
+            left: 'center'
         },
-        left: 'center'          // Alineación del título (opcional)
-    },
         tooltip: {},
         legend: { data: ['Proyectos'], top: 'bottom' },
         radar: { indicator: [] },
@@ -59,14 +55,9 @@ $(document).ready(function () {
     const radarChartMicroproyectos = echarts.init(document.getElementById('graficoRadarMicroproyectos'));
     const radarOptionsMicroproyectos = {
         title: { text: 'Contribución por Docentes a Microproyectos Estratégicos',
-            textStyle: {
-            fontSize: 18,       // Tamaño de la fuente
-            fontWeight: 'bold', // Negrita
-            color: '#333'       // Color del texto
-        },
-        left: 'center'  
-                
-        },
+            textStyle: {fontSize: 18,   fontWeight: 'bold', color: '#333' },
+        left: 'center'      
+     },
         tooltip: {},
         legend: { data: ['Microproyectos'], top: 'bottom' },
         radar: { indicator: [] },
