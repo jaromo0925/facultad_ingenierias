@@ -1,20 +1,13 @@
 [
     {
-        "NOMBRE COLABORADOR":null,
-        "Tpo de Acompañamiento ":null,
-        "Cursos o temas acompañados":null,
-        "Numero de estudiantes acompañados ":null,
-        "Impacto ":null,
-        "Observaciones":null,
-        "Link Evidencia":null,
-        "Unnamed: 7":null,
-        "Unnamed: 8":null,
-        "Unnamed: 9":null,
-        "Unnamed: 10":null,
-        "Unnamed: 11":null,
-        "Unnamed: 12":null,
-        "Unnamed: 13":null,
-        "Tpo de Acompañamiento .1":"Académica"
+        "NOMBRE COLABORADOR":"Alexander Revueltas",
+        "Tpo de Acompañamiento ":"Académica",
+        "Cursos o temas acompañados":"Aproximación de la distribución normal a la binomial, Funciones de distribución de probabilidad continua, Distribución normal a la binomial , Estructura ,Distribución de probabilidad, Factorizacion ,Proyecto final, Probabilidades , Fuerzas",
+        "Numero de estudiantes acompañados ":13.0,
+        "Impacto ":"Desempeño Académico",
+        "Observaciones":"Proyecto PAOE",
+        "Link Evidencia":"https:\/\/usbmedellin.sharepoint.com\/:x:\/s\/FacultaddeIngenieria\/Ef9crwOkJXxMo0bRAw9YLbAB6XJVAulWl_pjy_BR44jomQ?e=lrW6hu"
+      
     },
     {
         "NOMBRE COLABORADOR":null,
