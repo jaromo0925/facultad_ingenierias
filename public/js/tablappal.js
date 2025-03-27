@@ -40,7 +40,7 @@ $(document).ready(function () {
     const radarOptionsProyectos = {
         title: { text: 'Contribución por Docentes a Proeyctos Estratégicos',
         textStyle: {
-            fontSize: 10,       // Tamaño de la fuente
+            fontSize: 18,       // Tamaño de la fuente
             fontWeight: 'bold', // Negrita
             color: '#333'       // Color del texto
         },
@@ -60,7 +60,13 @@ $(document).ready(function () {
     // Inicializar Radar de Microproyectos
     const radarChartMicroproyectos = echarts.init(document.getElementById('graficoRadarMicroproyectos'));
     const radarOptionsMicroproyectos = {
-        title: { text: 'Contribución por Docentes a Microproyectos Estratégicos' },
+        title: { text: 'Contribución por Docentes a Microproyectos Estratégicos',
+            textStyle: {
+            fontSize: 18,       // Tamaño de la fuente
+            fontWeight: 'bold', // Negrita
+            color: '#333'       // Color del texto
+        },
+               },
         tooltip: {},
         legend: { data: ['Microproyectos'], top: 'bottom' },
         radar: { indicator: [] },
