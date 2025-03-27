@@ -55,7 +55,11 @@ $(document).ready(function () {
     // Inicializar Radar de Microproyectos
     const radarChartMicroproyectos = echarts.init(document.getElementById('graficoRadarMicroproyectos'));
     const radarOptionsMicroproyectos = {
-        title: { text: 'Contribución por Docentes a Microproyectos Estratégicos'
+        title: { text: 'Contribución por Docentes a Microproyectos Estratégicos',
+            textStyle: {
+            fontSize: 18,       // Tamaño de la fuente
+            fontWeight: 'bold', // Negrita
+            color: '#333'       // Color del texto
         },
         left: 'center'  
                 
@@ -71,7 +75,12 @@ $(document).ready(function () {
     // Inicializar Gráfico de Barras por Estado
 const barChartEstados = echarts.init(document.getElementById('graficoBarrasEstados'));
 const barOptionsEstados = {
-    title: { text: 'Proyectos por Estado' },
+    title: { text: 'Proyectos por Estado',
+           textStyle: {
+            fontSize: 18,       // Tamaño de la fuente
+            fontWeight: 'bold', // Negrita
+            color: '#333'       // Color del texto
+           },
     tooltip: { trigger: 'axis' },
     xAxis: {
         type: 'category',
