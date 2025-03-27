@@ -38,12 +38,15 @@ $(document).ready(function () {
     // Inicializar Radar de Proyectos
     const radarChartProyectos = echarts.init(document.getElementById('graficoRadarProyectos'));
     const radarOptionsProyectos = {
-        title: { text: 'Contribución por Docentes a Proeyctos Estratégicos'},
-        left: 'center'  
-                
+        title: { 
+        text: 'Contribución por Docentes a Proyectos Estratégicos',
+        textStyle: {
+            fontSize: 18,       // Tamaño de la fuente
+            fontWeight: 'bold', // Negrita
+            color: '#333'       // Color del texto
         },
-
-        
+        left: 'center'          // Alineación del título (opcional)
+    },
         tooltip: {},
         legend: { data: ['Proyectos'], top: 'bottom' },
         radar: { indicator: [] },
