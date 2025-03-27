@@ -40,7 +40,6 @@ $(document).ready(function () {
     const radarOptionsProyectos = {
         title: { text: 'Contribución por Docentes a Proeyctos Estratégicos'
         },
-        left: 'center'          // Alineación del título (opcional) },
         tooltip: {},
         legend: { data: ['Proyectos'], top: 'bottom' },
         radar: { indicator: [] },
