@@ -40,7 +40,7 @@ $(document).ready(function () {
     const radarOptionsProyectos = {
         title: { text: 'Contribución por Docentes a Proeyctos Estratégicos',
         textStyle: {
-            fontSize: 18,       // Tamaño de la fuente
+            fontSize: 9,       // Tamaño de la fuente
             fontWeight: 'bold', // Negrita
             color: '#333'       // Color del texto
         },
