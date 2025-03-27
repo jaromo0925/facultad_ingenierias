@@ -38,7 +38,7 @@ $(document).ready(function () {
     // Inicializar Radar de Proyectos
     const radarChartProyectos = echarts.init(document.getElementById('graficoRadarProyectos'));
     const radarOptionsProyectos = {
-        title: { text: 'Cantidad de Proyectos Estratégicos' },
+        title: { text: 'Proyectos Estratégicos' },
         tooltip: {},
         legend: { data: ['Proyectos'], top: 'bottom' },
         radar: { indicator: [] },
@@ -50,7 +50,7 @@ $(document).ready(function () {
     // Inicializar Radar de Microproyectos
     const radarChartMicroproyectos = echarts.init(document.getElementById('graficoRadarMicroproyectos'));
     const radarOptionsMicroproyectos = {
-        title: { text: 'Cantidad de Microproyectos Estratégicos' },
+        title: { text: 'Microproyectos Estratégicos' },
         tooltip: {},
         legend: { data: ['Microproyectos'], top: 'bottom' },
         radar: { indicator: [] },
