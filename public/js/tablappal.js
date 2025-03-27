@@ -50,10 +50,7 @@ $(document).ready(function () {
     // Inicializar Radar de Microproyectos
     const radarChartMicroproyectos = echarts.init(document.getElementById('graficoRadarMicroproyectos'));
     const radarOptionsMicroproyectos = {
-        title: { text: 'Contribución por Docentes a Microproyectos Estratégicos',
-            textStyle: {fontSize: 18,   fontWeight: 'bold', color: '#333' },
-        left: 'center'      
-     },
+        title: { text: 'Contribución por Docentes a Microproyectos Estratégicos'},
         tooltip: {},
         legend: { data: ['Microproyectos'], top: 'bottom' },
         radar: { indicator: [] },
