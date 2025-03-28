@@ -59,7 +59,12 @@ const seriesData = tipos.map(tipo => ({
     name: tipo,
     type: 'bar',
     stack: 'total', // Quitar esta línea si el problema persiste
-    data: categorias.map(cat => datosPorCategoriaYTipo[cat]?.[tipo] || 0)
+    emphasis: {
+        focus: 'series'
+    },
+    data: categorias.map(cat => datosPorCategoriaYTipo[cat]?.[tipo] ?? 0), // Reemplazar undefined por 0
+    showSymbol: true, // Asegura que la serie se muestre en la leyenda
+    itemStyle: { opacity: 1 } // Asegura que no estén ocultas
 }));
 
 console.log("Series Data:", JSON.stringify(seriesData, null, 2));
@@ -70,8 +75,13 @@ graficoTiposDeProductos.setOption({
     tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
     xAxis: { type: 'category', data: categorias },
     yAxis: { type: 'value' },
-    //legend: { data: tipos, top: 20 },
-    series: seriesData
+    legend: { data: tipos, 
+             top: 20 },
+             selected: tipos.reduce((acc, tipo) => {
+        acc[tipo] = true; // Forzar que todas las series estén activadas
+        return acc;
+    },
+              series: seriesData
 });
 }
 
