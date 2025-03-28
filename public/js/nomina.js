@@ -112,7 +112,15 @@ function actualizarGraficosNomina(datos) {
                 data: [
                     { name: "Pregrado", value: totalPregrado },
                     { name: "Posgrado", value: totalPosgrado }
-                ]
+                ],
+                 label: {
+                show: true,         // Muestra etiquetas
+                position: "outside", // Coloca las etiquetas fuera del segmento
+                formatter: "{b}: {c}" // Muestra el nombre y el valor
+            },
+            labelLine: {
+                show: true // Muestra las líneas de guía para las etiquetas
+            }
             }
         ]
     });
