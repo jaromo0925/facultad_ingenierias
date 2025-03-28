@@ -68,7 +68,15 @@ function actualizarGraficosProyeccionSocial(datos) {
                 data: Object.keys(proyectosPorTipo).map(key => ({
                     name: key,
                     value: proyectosPorTipo[key]
-                }))
+                })),
+            label: {
+                show: true,         // Muestra etiquetas
+                position: "outside", // Coloca las etiquetas fuera del segmento
+                formatter: "{b}: {c}" // Muestra el nombre y el valor
+            },
+            labelLine: {
+                show: true // Muestra líneas de guía para conectar etiquetas
+            }
             }
         ]
     });
