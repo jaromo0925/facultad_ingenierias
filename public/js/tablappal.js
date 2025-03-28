@@ -52,8 +52,9 @@ $(document).ready(function () {
     const radarOptionsMicroproyectos = {
     title: { 
         text: 'Contribución Docente - Microproyectos Estratégicos',
+        left: 'center', 
         textStyle: {
-            fontSize: 9 // Ajusta el tamaño según lo necesites
+            fontSize: 11 // Ajusta el tamaño según lo necesites
         }
     },
     tooltip: {},
