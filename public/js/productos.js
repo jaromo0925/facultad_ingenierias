@@ -44,27 +44,35 @@ function actualizarGraficosProductos(datos) {
     const categorias = [...new Set(datos.map(d => d.Categoria))];
     const tipos = [...new Set(datos.map(d => d["Tipo de producto"]))];
 
-    const datosPorCategoriaYTipo = datos.reduce((acc, curr) => {
-        if (!acc[curr.Categoria]) acc[curr.Categoria] = {};
-        acc[curr.Categoria][curr["Tipo de producto"]] = curr.Cantidad;
-        return acc;
-    }, {});
+console.log("Categorías:", categorias);
+console.log("Tipos de productos:", tipos);
 
-    const seriesData = tipos.map(tipo => ({
-        name: tipo,
-        type: 'bar',
-        stack: 'total',
-        data: categorias.map(cat => datosPorCategoriaYTipo[cat]?.[tipo] || 0)
-    }));
+const datosPorCategoriaYTipo = datos.reduce((acc, curr) => {
+    if (!acc[curr.Categoria]) acc[curr.Categoria] = {};
+    acc[curr.Categoria][curr["Tipo de producto"]] = curr.Cantidad;
+    return acc;
+}, {});
 
-    graficoTiposDeProductos.setOption({
-        title: { text: "Tipos de Productos por Categoría", left: "center" },
-        tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
-        xAxis: { type: 'category', data: categorias },
-        yAxis: { type: 'value' },
-        legend: { data: tipos, top: 20 },
-        series: seriesData
-    });
+console.log("Datos por Categoría y Tipo:", datosPorCategoriaYTipo);
+
+const seriesData = tipos.map(tipo => ({
+    name: tipo,
+    type: 'bar',
+    stack: 'total', // Quitar esta línea si el problema persiste
+    data: categorias.map(cat => datosPorCategoriaYTipo[cat]?.[tipo] || 0)
+}));
+
+console.log("Series Data:", JSON.stringify(seriesData, null, 2));
+
+graficoTiposDeProductos.clear();
+graficoTiposDeProductos.setOption({
+    title: { text: "Tipos de Productos por Categoría", left: "center" },
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    xAxis: { type: 'category', data: categorias },
+    yAxis: { type: 'value' },
+    legend: { data: tipos, top: 20 },
+    series: seriesData
+});
 }
 
 // Llamar a la función de carga al iniciar la página
