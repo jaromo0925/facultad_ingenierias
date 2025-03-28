@@ -17,11 +17,22 @@ function inicializarTabla(datos) {
             { data: "ID del artículo", title: "ID" },
             { data: "Título del artículo", title: "Título" },
             { data: "Número", title: "Número" },
-            { 
-                data: "Fecha de publicación", 
-                title: "Fecha de Publicación",
-                render: (data) => data ? new Date(data).toLocaleDateString("es-ES") : "Sin fecha"
-            },
+          {
+    data: "Fecha de publicación",
+    title: "Fecha de publicación",
+    render: function(data) {
+        if (!data) return "Sin fecha";
+        
+        // Convertir de "DD/MM/YYYY" a "YYYY-MM-DD"
+        const partes = data.split("/");
+        if (partes.length === 3) {
+            const fecha = new Date(`${partes[2]}-${partes[1]}-${partes[0]}`);
+            return fecha.toLocaleDateString("es-ES");
+        }
+        
+        return data; // Si el formato no es el esperado, se muestra tal cual
+    }
+},
             { data: "Vistas del resumen", title: "Vistas Resumen" },
             { data: "Total de vistas de la galerada", title: "Vistas Galerada" }
         ]
