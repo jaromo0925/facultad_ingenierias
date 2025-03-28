@@ -137,7 +137,15 @@ function actualizarGraficosNomina(datos) {
             {
                 type: 'pie',
                 radius: '50%',
-                data: data3
+                data: data3,
+                label: {
+                show: true,         // Muestra etiquetas
+                position: "outside", // Coloca las etiquetas fuera del segmento
+                formatter: "{b}: {c}" // Muestra el nombre y el valor
+            },
+            labelLine: {
+                show: true // Muestra líneas de guía para conectar etiquetas
+            }
             }
         ]
     });
