@@ -78,12 +78,12 @@ graficoTiposDeProductos.setOption({
     yAxis: { type: 'value' },
     legend: { 
         data: tipos, 
-        top: 20
+        top: 20,
+        selected: tipos.reduce((acc, tipo) => {
+            acc[tipo] = true; // Forzar que todas las series estén activadas
+            return acc;
+        }, {})
     },
-    selected: tipos.reduce((acc, tipo) => {
-        acc[tipo] = true; // Forzar que todas las series estén activadas
-        return acc;
-    }, {}),
     series: seriesData
 });
 }
