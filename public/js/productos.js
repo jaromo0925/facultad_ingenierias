@@ -5,6 +5,7 @@ function cargarDatosProductos() {
     fetch('/data/Productos.json')
         .then(response => response.json())
         .then(datos => {
+            console.log("Datos cargados:", datos);
             inicializarGraficosProductos(datos);
         })
         .catch(error => console.error('Error cargando los datos:', error));
