@@ -2,25 +2,16 @@ $(document).ready(function () {
     // Inicializar DataTable
     const tabla = $('#miTabla').DataTable({
         ajax: {
-            url: 'http://localhost:3000/data/Concertación_Propositos.json', // URL correcta
+            url: '/data/Revista.json', // URL correcta
             dataSrc: ''
         },
         columns: [
-            { data: 'NOMBRE COLABORADOR' },
-            { data: 'Proyectos estratégicos de seccional Medellín' },
-            { data: 'Microproyectos estratégicos seccional Medellín' },
-            { data: 'Línea estratégica corporativa' },
-            { data: 'Aporte de valor: ¿cómo contribuyo a los proyectos estratégicos?' },
-            { data: 'Actividades específicas' },
-            { data: 'Indicador de resultado o producto' },
-            { data: 'Estado de seguimiento' },
-            {
-                data: 'Porcentaje de seguimiento',
-                render: function (data) {
-                    return (data * 100).toFixed(1) + '%';
-                }
-            },
-            { data: 'Observación de seguimiento' },
+            { data: 'ID del artículo' },
+            { data: 'Título del artículo' },
+            { data: 'Número' },
+            { data: 'Fecha de publicación' },
+            { data: 'Vistas del resumen' },
+            { data: 'Total de vistas de la galerada' },
             {
                 data: 'Link Evidencia',
                 render: function (data) {
