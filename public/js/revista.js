@@ -14,7 +14,7 @@ function inicializarTabla(datos) {
     tabla = $('#tablaDatos').DataTable({
         data: datos,
         columns: [
-            { data: "ID del artículo", title: "ID" },
+            { data: "ID del artículo", title: "ID del artículo" },
             { data: "Título del artículo", title: "Título" },
             { data: "Número", title: "Número" },
           {
