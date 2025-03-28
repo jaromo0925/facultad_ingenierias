@@ -91,7 +91,8 @@ function actualizarGraficosNomina(datos) {
                 radius: '50%',
                 data: Object.keys(data1).map(key => ({ name: key, value: data1[key] })),
                 label: {
-                show: true, // Muestra las etiquetas
+                show: true,
+                position: "inside",// Muestra las etiquetas
                 formatter: '{b}: {c}' // Muestra el nombre y el valor
             }
             }
