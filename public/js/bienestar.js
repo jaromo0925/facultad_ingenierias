@@ -110,7 +110,8 @@ function actualizarGraficosBienestar(datos) {
             axisLabel: { rotate: 0 }
         },
         yAxis: { type: 'value' },
-        legend: { data: tiposAcompanamiento },
+        legend: { data: tiposAcompanamiento,
+        top: 40  },
         series: seriesData
     });
 }
