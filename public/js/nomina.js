@@ -89,7 +89,11 @@ function actualizarGraficosNomina(datos) {
             {
                 type: 'pie',
                 radius: '50%',
-                data: Object.keys(data1).map(key => ({ name: key, value: data1[key] }))
+                data: Object.keys(data1).map(key => ({ name: key, value: data1[key] })),
+                label: {
+                show: true, // Muestra las etiquetas
+                formatter: '{b}: {c}' // Muestra el nombre y el valor
+            }
             }
         ]
     });
