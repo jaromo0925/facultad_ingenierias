@@ -1,3 +1,6 @@
+let graficoProductosPorLinea;
+let graficoTiposDeProductos;
+
 function cargarDatosProductos() {
     fetch('/data/Productos.json')
         .then(response => response.json())
@@ -5,6 +8,13 @@ function cargarDatosProductos() {
             inicializarGraficosProductos(datos);
         })
         .catch(error => console.error('Error cargando los datos:', error));
+}
+
+function inicializarGraficosProductos(datos) {
+    graficoProductosPorLinea = echarts.init(document.getElementById('graficoProductosPorLinea'));
+    graficoTiposDeProductos = echarts.init(document.getElementById('graficoTiposDeProductos'));
+
+    actualizarGraficosProductos(datos);
 }
 
 function actualizarGraficosProductos(datos) {
@@ -57,4 +67,4 @@ function actualizarGraficosProductos(datos) {
 }
 
 // Llamar a la función de carga al iniciar la página
-document.addEventListener('DOMContentLoaded', cargarDatos);
+document.addEventListener('DOMContentLoaded', cargarDatosProductos);
