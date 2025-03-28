@@ -75,13 +75,15 @@ graficoTiposDeProductos.setOption({
     tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
     xAxis: { type: 'category', data: categorias },
     yAxis: { type: 'value' },
-    legend: { data: tipos, 
-             top: 20 },
-             selected: tipos.reduce((acc, tipo) => {
-        acc[tipo] = true; // Forzar que todas las series estén activadas
-        return acc;
+    legend: { 
+        data: tipos, 
+        top: 20,
+        selected: tipos.reduce((acc, tipo) => {
+            acc[tipo] = true; // Forzar que todas las series estén activadas
+            return acc;
+        }, {}) // ← Aquí estaba el error, faltaba el objeto vacío `{}` como inicializador
     },
-              series: seriesData
+    series: seriesData
 });
 }
 
