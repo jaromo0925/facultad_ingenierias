@@ -41,8 +41,8 @@ function actualizarGraficosProductos(datos) {
     });
 
     // Gráfico: Barras con cantidad de productos por tipo y categoría
-    const categorias = [...new Set(datos.map(d => d.Categoria))];
-    const tipos = [...new Set(datos.map(d => d["Tipo de producto"]))];
+const categorias = [...new Set(datos.map(d => d.Categoria))];
+const tipos = [...new Set(datos.map(d => d["Tipo de producto"]))];
 
 console.log("Categorías:", categorias);
 console.log("Tipos de productos:", tipos);
@@ -70,7 +70,7 @@ graficoTiposDeProductos.setOption({
     tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
     xAxis: { type: 'category', data: categorias },
     yAxis: { type: 'value' },
-    legend: { data: tipos, top: 20 },
+    //legend: { data: tipos, top: 20 },
     series: seriesData
 });
 }
