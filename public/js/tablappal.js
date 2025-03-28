@@ -54,7 +54,7 @@ $(document).ready(function () {
         text: 'Contribución Docente - Microproyectos Estratégicos',
         left: 'center', 
         textStyle: {
-            fontSize: 13 // Ajusta el tamaño según lo necesites
+            fontSize: 18 // Ajusta el tamaño según lo necesites
         }
     },
     tooltip: {},
