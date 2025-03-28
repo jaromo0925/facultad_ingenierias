@@ -116,7 +116,12 @@ function actualizarGraficosProyeccionSocial(datos) {
             fontSize: 12          // Ajusta el tamaño del texto
         },align: "center" },
         yAxis: { type: 'value' },
-        series: seriesEstado
+        series: seriesEstado,
+        label: {
+            show: true,          // Muestra etiquetas en cada barra
+            position: "inside",  // Ubica las etiquetas dentro de las barras
+            formatter: "{c}"     // Muestra solo el valor numérico
+        }
     });
 
     // Gráfico: Barras por Entidad y Valor Total
