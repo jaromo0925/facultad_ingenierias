@@ -1,0 +1,32 @@
+[
+    {
+        "Categoria":"Generación de nuevo conocimiento",
+        "Tipo de producto":"Artículos tipo top",
+        "Cantidad":4
+    },
+    {
+        "Categoria":"Generación de nuevo conocimiento",
+        "Tipo de producto":"Capítulos de libros",
+        "Cantidad":2
+    },
+    {
+        "Categoria":"Productos resultado de actividades de Apropiación Social del Conocimiento y Divulgación Pública de la Ciencia",
+        "Tipo de producto":"Ediciones de revistas científica o de libros resultado de investigación",
+        "Cantidad":1
+    },
+    {
+        "Categoria":"Productos de actividades relacionadas con la formación de recurso humano para CTI",
+        "Tipo de producto":"Tesis de maestría",
+        "Cantidad":2
+    },
+    {
+        "Categoria":"Productos de actividades relacionadas con la formación de recurso humano para CTI",
+        "Tipo de producto":"Tesis de pregrado",
+        "Cantidad":10
+    },
+    {
+        "Categoria":"Productos de actividades relacionadas con la formación de recurso humano para CTI",
+        "Tipo de producto":"Proyectos de investigación y desarrollo",
+        "Cantidad":2
+    }
+]
