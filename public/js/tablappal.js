@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Inicializar DataTable
     const tabla = $('#miTabla').DataTable({
         ajax: {
-            url: '/data/Concertación_Propositos.json', // URL correcta
+            url: 'http://localhost:3000/data/Concertación_Propositos.json', // URL correcta
             dataSrc: ''
         },
         columns: [
@@ -38,7 +38,7 @@ $(document).ready(function () {
     // Inicializar Radar de Proyectos
     const radarChartProyectos = echarts.init(document.getElementById('graficoRadarProyectos'));
     const radarOptionsProyectos = {
-        title: { text: 'Contribución por Docentes a Proeyctos Estratégicos' },
+        title: { text: 'Cantidad de Proyectos Estratégicos' },
         tooltip: {},
         legend: { data: ['Proyectos'], top: 'bottom' },
         radar: { indicator: [] },
@@ -50,7 +50,7 @@ $(document).ready(function () {
     // Inicializar Radar de Microproyectos
     const radarChartMicroproyectos = echarts.init(document.getElementById('graficoRadarMicroproyectos'));
     const radarOptionsMicroproyectos = {
-        title: { text: 'Contribución por Docentes a Microproyectos Estratégicos'},
+        title: { text: 'Cantidad de Microproyectos Estratégicos' },
         tooltip: {},
         legend: { data: ['Microproyectos'], top: 'bottom' },
         radar: { indicator: [] },
@@ -62,12 +62,7 @@ $(document).ready(function () {
     // Inicializar Gráfico de Barras por Estado
 const barChartEstados = echarts.init(document.getElementById('graficoBarrasEstados'));
 const barOptionsEstados = {
-    title: { text: 'Proyectos por Estado',
-           textStyle: {
-            fontSize: 18,       // Tamaño de la fuente
-            fontWeight: 'bold', // Negrita
-            color: '#333'       // Color del texto
-           },
+    title: { text: 'Proyectos por Estado' },
     tooltip: { trigger: 'axis' },
     xAxis: {
         type: 'category',
@@ -351,3 +346,4 @@ function actualizarGraph(datos) {
     });
     
 });
+
