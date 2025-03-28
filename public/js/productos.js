@@ -68,6 +68,7 @@ const seriesData = tipos.map(tipo => ({
 }));
 
 console.log("Series Data:", JSON.stringify(seriesData, null, 2));
+    
 
 graficoTiposDeProductos.clear();
 graficoTiposDeProductos.setOption({
@@ -77,12 +78,12 @@ graficoTiposDeProductos.setOption({
     yAxis: { type: 'value' },
     legend: { 
         data: tipos, 
-        top: 20,
-        selected: tipos.reduce((acc, tipo) => {
-            acc[tipo] = true; // Forzar que todas las series estén activadas
-            return acc;
-        }, {}) // ← Aquí estaba el error, faltaba el objeto vacío `{}` como inicializador
+        top: 20
     },
+    selected: tipos.reduce((acc, tipo) => {
+        acc[tipo] = true; // Forzar que todas las series estén activadas
+        return acc;
+    }, {}),
     series: seriesData
 });
 }
