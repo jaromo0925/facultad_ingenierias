@@ -50,12 +50,17 @@ $(document).ready(function () {
     // Inicializar Radar de Microproyectos
     const radarChartMicroproyectos = echarts.init(document.getElementById('graficoRadarMicroproyectos'));
     const radarOptionsMicroproyectos = {
-        title: { text: 'Contribución Docente -Microproyectos Estratégicos' },
-        tooltip: {},
-        legend: { data: ['Microproyectos'], top: 'bottom' },
-        radar: { indicator: [] },
-        series: [{ name: 'Microproyectos', type: 'radar', data: [] }]
-    };
+    title: { 
+        text: 'Contribución Docente - Microproyectos Estratégicos',
+        textStyle: {
+            fontSize: 14 // Ajusta el tamaño según lo necesites
+        }
+    },
+    tooltip: {},
+    legend: { data: ['Microproyectos'], top: 'bottom' },
+    radar: { indicator: [] },
+    series: [{ name: 'Microproyectos', type: 'radar', data: [] }]
+};
     radarChartMicroproyectos.setOption(radarOptionsMicroproyectos);
 
     ///////////////////////////////
