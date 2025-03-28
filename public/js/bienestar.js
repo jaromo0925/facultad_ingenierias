@@ -102,12 +102,12 @@ function actualizarGraficosBienestar(datos) {
             }
         },
     grid: { 
-        top: 60  // Asegura espacio para el título moviendo el gráfico hacia abajo
+        top: 90  // Asegura espacio para el título moviendo el gráfico hacia abajo
     },
         xAxis: { 
             type: 'category', 
             data: docentes,
-            axisLabel: { rotate: 45 }
+            axisLabel: { rotate: 0 }
         },
         yAxis: { type: 'value' },
         legend: { data: tiposAcompanamiento },
