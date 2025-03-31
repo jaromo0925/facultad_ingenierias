@@ -5,22 +5,18 @@ $(document).ready(function () {
             url: '/data/Revista.json', // URL correcta
             dataSrc: ''
         },
-        columns: [
-            { data: 'ID del artículo' },
-            { data: 'Título del artículo' },
-            { data: 'Número' },
-            { data: 'Fecha de publicación' },
-            { data: 'Vistas del resumen' },
-            { data: 'Total de vistas de la galerada' },
-            {
-                data: 'Link Evidencia',
-                render: function (data) {
-                    return data ? `<a href="${data}" target="_blank">Ver Evidencia</a>` : 'N/A';
-                }
-            }
-        ],
+      columns: [
+            { data: 'ID_del_articulo' },
+            { data: 'Titulo_del_articulo' },
+            { data: 'Numero' },
+            { data: 'Fecha_de_publicacion' },
+            { data: 'Vistas_del_resumen' },
+            { data: 'Total_de_vistas_de_la_galerada' }
+          ],
         responsive: true,
         language: {
             url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json"
         }
     });
+    
+});
