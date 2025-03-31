@@ -6,10 +6,10 @@ $(document).ready(function () {
             dataSrc: ''
         },
       columns: [
-            { data: 'ID del articulo' },
-            { data: 'Titulo del articulo' },
-            { data: 'Numero' },
-            { data: 'Fecha de publicacion' },
+            { data: 'ID del artículo' },  
+            { data: 'Título del artículo' }, 
+            { data: 'Número' },
+            { data: 'Fecha de publicación' },
             { data: 'Vistas del resumen' },
             { data: 'Total de vistas de la galerada' },
            { 
