@@ -6,12 +6,18 @@ $(document).ready(function () {
             dataSrc: ''
         },
       columns: [
-            { data: 'ID_del_articulo' },
-            { data: 'Titulo_del_articulo' },
+            { data: 'ID del articulo' },
+            { data: 'Titulo del articulo' },
             { data: 'Numero' },
-            { data: 'Fecha_de_publicacion' },
-            { data: 'Vistas_del_resumen' },
-            { data: 'Total_de_vistas_de_la_galerada' }
+            { data: 'Fecha de publicacion' },
+            { data: 'Vistas del resumen' },
+            { data: 'Total de vistas de la galerada' },
+           { 
+                data: null,
+                render: function (data, type, row) {
+                    return `<a href="#" class="btn btn-primary">Ver Evidencia</a>`;
+                }
+            }
           ],
         responsive: true,
         language: {
