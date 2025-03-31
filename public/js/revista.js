@@ -11,13 +11,7 @@ $(document).ready(function () {
             { data: 'Número' },
             { data: 'Fecha de publicación' },
             { data: 'Vistas del resumen' },
-            { data: 'Total de vistas de la galerada' },
-           { 
-                data: null,
-                render: function (data, type, row) {
-                    return `<a href="#" class="btn btn-primary">Ver Evidencia</a>`;
-                }
-            }
+            { data: 'Total de vistas de la galerada' }
           ],
         responsive: true,
         language: {
